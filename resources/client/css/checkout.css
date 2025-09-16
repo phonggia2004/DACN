@@ -1,0 +1,180 @@
+/* ========== CHECKOUT SIMPLE STYLES ========== */
+:root {
+  --black: #000000;
+  --dark-gray: #1a1a1a;
+  --gold: #FFD700;
+  --white: #ffffff;
+  --gray: #888888;
+  --border: #333333;
+}
+
+/* ========== ORDER INFO ========== */
+.info-order {
+  background: var(--dark-gray);
+  color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  margin-bottom: 20px;
+}
+
+.info__order-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info__order-box:last-child {
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ========== DISCOUNT ========== */
+.discount {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.discount input {
+  flex: 1;
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--white);
+}
+
+.discount input:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.discount button {
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.discount button:hover {
+  background: var(--white);
+}
+
+/* ========== PAYMENT METHOD ========== */
+.payment-method {
+  border-top: 1px solid var(--border);
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.payment-method-select {
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-method-select:hover {
+  border-color: var(--gold);
+  background: var(--dark-gray);
+}
+
+.payment-method-select.selected {
+  border-color: var(--gold);
+  background: var(--dark-gray);
+}
+
+.payment-method-select--check {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.payment-method-select--check input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--gold);
+}
+
+.payment-method-select--check img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.payment-method-select--check span {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ========== ERROR MESSAGE ========== */
+#payment_method-error {
+  color: #ff4444;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .info-order {
+    padding: 15px;
+  }
+  
+  .info__order-box {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .discount {
+    flex-direction: column;
+  }
+  
+  .discount button {
+    width: 100%;
+  }
+  
+  .payment-method-select {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-order {
+    padding: 12px;
+  }
+  
+  .info__order-box {
+    font-size: 13px;
+  }
+  
+  .payment-method-select--check {
+    gap: 10px;
+  }
+  
+  .payment-method-select--check img {
+    width: 25px;
+    height: 25px;
+  }
+}
